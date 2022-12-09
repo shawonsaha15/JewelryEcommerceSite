@@ -1,46 +1,86 @@
-body{
-    font-family: 'Lato', sans-serif;
-    padding: 0;
-    margin: 0;
+#body{
+    width: 100%;
 }
 
-nav{
-    background-color: black;
-    color: white;
-    padding: 20px 50px;
-}
-
-.navTop{
+#header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 80px;
+    background: #926F34;
+    box-shadow: inset 0 10px 15px #DFBD69, 0 5px 15px rgba(0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    background-color: gray;
-    padding: 5px 20px;
-    border-radius: 15px;
-}
-
-.searchInput{
-    border: none;
-    background-color: transparent;
-}
-
-.searchInput::placeholder{
-    color: lightgray;
-}
-
-.navBottom{
+#navbar{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.menuItem{
-    margin-right: 50px;
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: gold;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #FFFFFF;   
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #FFFFFF;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*Home Page*/
+#hero{
+    background-image: url("images/1613507835-jewelry.jpeg");
+    height: 90vh;
+    width: 88%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;    
+}
+
+#hero h1{
+    color: aqua;    
+}
+
+#hero button{
+    background-image: url("images/button.png");
+    background-color: transparent;
+    color: aqua;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
     cursor: pointer;
-    color: lightgray;
+    font-weight: 700;
+    font-size: 15px;
 }
